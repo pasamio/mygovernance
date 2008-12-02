@@ -1,0 +1,88 @@
+/*********
+*  Menu  *
+*********/
+/** From videolan.net **/
+table.menu
+{
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  background-color: #E0E0F0;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #F0F0FF #B0B0C0 #B0B0C0 #F0F0FF;
+}
+
+table.menu-back
+{
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  background-color: #D8D8F8;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #F0F0FF #A0A0C0 #A0A0C0 #F0F0FF;
+}
+
+table.main
+{
+  margin: 8px 0px 10px 30px;
+}
+
+td.button
+{
+  padding: 1px;
+  background-color: #E0E0F0;
+  border: 0px;
+  border-style: solid;
+  border-color: #F0F0FF #B0B0C0 #B0B0C0 #F0F0FF;
+  cursor: pointer;
+}
+
+div.sep
+{
+  width: 0px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  border-right-color: #F0F0FF;
+  border-left-color: #B0B0C0;
+}
+
+td.button-up
+{
+  padding: 0px;
+  background-color: #E8E8F8;
+  border: 1px;
+  border-style: solid;
+  border-color: #F0F0FF #B0B0C0 #B0B0C0 #F0F0FF;
+  cursor: pointer;
+}
+
+td.button-down
+{
+  padding: 0px;
+  background-color: #D8D8E8;
+  border: 1px;
+  border-style: solid;
+  border-color: #B0B0C0 #F0F0FF #F0F0FF #B0B0C0;
+  cursor: pointer;
+}
+
+td.button-text
+{
+  color: black;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 1px 3px 1px 2px;
+  border: 0px;
+}
+
+img.button
+{
+  height: 35px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
