@@ -1,0 +1,124 @@
+CHANGELOG
+
+Legend:
+
+* -> Security Fix
+# -> Bug Fix
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+02-Dec-2008 Sam Moffatt
+ ! Released software out into public
+
+16-Aug-2007 Sam Moffatt
+ # Fixed missing variable instances all over the place
+ # Cleaned things up
+ + Added an extra selector status
+
+26-July-2007 Sam Moffatt
+ # Fixed [#352] URL prefix not being prepended properly
+ # Fixed [#351] Sort options don't work
+ # Fixed an itemid bug
+ ^ Libraries Updates
+ 
+
+19-July-2007 Sam Moffatt
+ ^ Updated Joomla! Framework
+ # Fixed [#350] Error attempting project assessment
+ + Added extra configuration params
+ + Added alias to menu table.
+ + Fixed a similar bug found in Joomla! for init code path
+ ^ Renamed _system template to system
+
+19-04-2007 Sam Moffatt
+^ Fixed project additions
+^ Fixed dotproject conversion
+
+17-04-2007 Sam Moffatt
++ Added new SSO framework
++ Added new User Source framework
+- Removed old LDAP Plugin
+
+13-Apr-2007 Sam Moffatt
+^ Moved to JFramework Auth System
++ Added Joomla! 1.5 Authentication and User Plugins (Joomla and LDAP)
+^ Altered myGovAuth to use JUser
+- Removed compat plugins
+^ Fixed non SSO login issues
+
+12-Apr-2007 Sam Moffatt
+^ Completed component conversion
+^ Finalized com_project
++ Added com_about
++ Added com_admin
++ Added com_dotproject (sync services)
++ Added com_login
++ Added com_logout
++ Added com_reports
++ Added com_user
+! Radar graphs appear to missing their fonts
+^ Moved to fully rendered environment (e.g. all JFramework powered)
+
+
+11-Apr-2007 Sam Moffatt
+^ Moved functions into MyGovCommon
+^ Moved auth functions into MyGovAuth
+! Finalizing DB Port
+^ Shifted to JParameter
+^ Shifted to JPlugin
+^ Moved common db functions in MyGovDB
+- Removed compat functions
+- Removed useless OpenID library
++ Added SQL upgrade
+^ Moved phpplot into libraries structure
+- Removed 'library' folder
++ Added _system template
+^ Started component conversion with com_project
++ Added com_project
+
+
+10-Apr-2007 Sam Moffatt
++ Added Joomla Libraries
+^ Ported PEAR to use jimport for the RADAR graphs
+^ Using Joomla! LDAP Library
+^ Using Joomla! MySQL Library
++ Created myGovHTML
++ Created myGovError
+! Database changes in progress! Unstable!
+
+10-Jan-2007 Sam Moffatt
+# [20] MySQL Abstraction Layer Converted
+# [16] Wiped out error system; could be done better
+
+13/09/2006 BETA 5 Release
+# [18] Dropdown Calender for Dates
+# [22] Change input to radio buttons
+# [52] Group Information not properly assigned
+# [53] Group Information not properly assigned 
+# [68] LDAP authenticating issues
+# [79] Email users on project approval
+# [80] More feedback on project status
+# [57] Admin - sort users by name
+# [58] New project - use current FY
+- SQL: ALTER TABLE `mygovernance`.`projects` ADD COLUMN `proj_notify` TEXT NOT NULL DEFAULT '' AFTER `proj_dotprojectid`;
+
+
+20/02/06 BETA 3 goes live
+Added
+- FYEAR field
+Fixed
+- JS error preventing delete
+- Made adding projects idiot proof
+
+13/07/05 BETA 2 goes live
+Added
+- Built proper install script
+- Database backup (XML,SQL)
+- Extended Administration
+- Repair Database
+Fixed
+- User editing
+
+20/06/05 BETA 1 goes live 
