@@ -58,8 +58,7 @@ base_dn=0=tccdir');
 INSERT INTO `plugins` VALUES(2, 'ACL Response', 'response', 'acl', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', '');
 INSERT INTO `plugins` VALUES(3, 'LDAP SSO', 'ldap_sso', 'auth', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', '');
 INSERT INTO `plugins` VALUES(4, 'dotProject Display', 'dotproject', 'display', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', '');
-INSERT INTO `plugins` VALUES(5, 'dotProject Export', 'dotproject', 'export', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', ''
-, '', '', '', , , , , , , '', '');
+INSERT INTO `plugins` VALUES(5, 'dotProject Export', 'dotproject', 'export', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', '');
 INSERT INTO `plugins` VALUES (6, 'Authentication - Joomla', 'joomla', 'authentication', 0, 1, 1, 1, 0, 0, '0000-00-00 00:00:00', '');
 INSERT INTO `plugins` VALUES (7, 'Authentication - LDAP', 'ldap', 'authentication', 0, 2, 1, 1, 0, 0, '0000-00-00 00:00:00', 'host=\nport=389\nuse_ldapV3=0\nnegotiate_tls=0\nno_referrals=0\nauth_method=bind\nbase_dn=\nsearch_string=\nusers_dn=\nusername=\npassword=\nldap_fullname=fullName\nldap_email=mail\nldap_uid=uid\n\n');
 INSERT INTO `plugins` VALUES (8, 'User - Joomla!', 'joomla', 'user', 0, 0, 1, 0, 0, 0, '0000-00-00 00:00:00', 'autoregister=1\n\n');
@@ -118,7 +117,7 @@ CREATE TABLE `menu` (
   KEY `menutype` (`menutype`)
 ) TYPE=MyISAM;
 
-INSERT INTO `menu` VALUES (1, 'mainmenu', 'Home', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, 'leading=1\r\nintro=2\r\nlink=1\r\nimage=1\r\npage_title=0\r\nheader=Welcome to the Frontpage\r\norderby_sec=front\r\nprint=0\r\npdf=0\r\nemail=0\r\nback_button=0', 0, 0, 1);
+INSERT INTO `menu` VALUES (1, 'mainmenu', 'Home', 'home', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, '', 0, 0, 1);
 
 # --------------------------------------------------------
 
@@ -273,7 +272,7 @@ CREATE TABLE `projects` (
  `bus_owner` VARCHAR(30) NOT NULL ,
  `proj_dotprojectid` INT NOT NULL,
  `proj_notify` TEXT NOT NULL DEFAULT '',
-  `proj_status` ENUM('On Schedule', 'Behind Schedule', 'Postponed', 'Achieved', 'Not Achieved', 'Overbudget'),
+ # `proj_status` ENUM('On Schedule', 'Behind Schedule', 'Postponed', 'Achieved', 'Not Achieved', 'Overbudget'),
   PRIMARY KEY  (`pid`),
   KEY `proj_createdate` (`proj_createdate`)
 ) TYPE=MyISAM PACK_KEYS=0 COMMENT='Main project table';
