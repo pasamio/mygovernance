@@ -117,7 +117,7 @@ CREATE TABLE `menu` (
   KEY `menutype` (`menutype`)
 ) TYPE=MyISAM;
 
-INSERT INTO `menu` VALUES (1, 'mainmenu', 'Home', 'home', 'index.php?option=com_content&view=frontpage', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, '', 0, 0, 1);
+INSERT INTO `menu` VALUES (1, 'mainmenu', 'Home', 'home', 'index.php?option=com_project', 'component', 1, 0, 20, 0, 1, 0, '0000-00-00 00:00:00', 0, 0, 0, 3, '', 0, 0, 1);
 
 # --------------------------------------------------------
 
@@ -272,6 +272,8 @@ CREATE TABLE `projects` (
  `bus_owner` VARCHAR(30) NOT NULL ,
  `proj_dotprojectid` INT NOT NULL,
  `proj_notify` TEXT NOT NULL DEFAULT '',
+  `financialyear` varchar(10), 
+  `recommended` varchar(10),
  # `proj_status` ENUM('On Schedule', 'Behind Schedule', 'Postponed', 'Achieved', 'Not Achieved', 'Overbudget'),
   PRIMARY KEY  (`pid`),
   KEY `proj_createdate` (`proj_createdate`)
